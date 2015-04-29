@@ -74,11 +74,11 @@ class docker::service (
       }
     }
     'RedHat': {
-      if ($::operatingsystem == 'Fedora') or (versioncmp($::operatingsystemrelease, '7.0') >= 0) {
-        $template = 'docker.rhel7.erb'
-      } else {
+      # if ($::operatingsystem == 'Fedora') or (versioncmp($::operatingsystemrelease, '7.0') >= 0) {
+      #   $template = 'docker.rhel7.erb'
+      # } else {
         $template = 'docker.erb'
-      }
+      # }
       $hasstatus     = undef
       $hasrestart    = undef
 
